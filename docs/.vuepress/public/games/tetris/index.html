@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>俄罗斯方块</title>
+    <link rel="stylesheet" href="css/styles.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="tetris">
+        <canvas id="scene"></canvas>
+        <div id="gameOver">
+            <h1>游戏结束！</h1>
+            <h3>得分：<span id="finalScore">0</span></h3>
+			<h3>最高分：<span id="highScore">0</span></h3>
+            <h2><a href="#" id="restart">重新开始</a></h2>
+        </div>
+        <div id="side">
+            <div id="info">
+                <h1 id="levelInfo">级别：<br><span id="level">1</span></h1>
+                <h2 id="scoreInfo">得分：<br><span id="score">0</span></h2>
+                <h2 id="highInfo">最高分：<br><span id="highscore">0</span></h2>
+                <div id="rewardInfo" class="invisible">+<span id="reward">0</span></div>
+                <canvas id="preview"></canvas>
+                <br>
+                <a id="button" href="/news/game.html">返回纸片</a>
+                <h1 id="levelInfo">←→ 平移</h1>
+                <h1 id="levelInfo">↑↓ 旋转/加速</h1>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="dist/tetris.js"></script>
+<script>
+    (function() {
+        var tetris = new Tetris('tetris');
+        tetris.start();
+        tetris.updateHighScoreUI();
+    })();
+</script>
+</html>

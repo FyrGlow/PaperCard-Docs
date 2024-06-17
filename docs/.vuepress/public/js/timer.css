@@ -1,0 +1,18 @@
+#time-tracker {
+    display: none;
+    position: relative;
+    background-color: var(--theme-color); /* 使用变量 */
+    color: var(--bg-color); /* 使用变量 */
+    padding: 8px;
+    /* border-radius: 5px; */
+    font-size: 16px;
+    font-family: var(--font-family);
+    text-align: center;
+    opacity: 1;
+}
+
+@media only screen and (min-width: 600px) {
+    #time-tracker {
+        display: block;
+    }
+}

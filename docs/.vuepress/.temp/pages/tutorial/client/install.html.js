@@ -1,0 +1,16 @@
+import comp from "D:/projects/new/my-docs/docs/.vuepress/.temp/pages/tutorial/client/install.html.vue"
+const data = JSON.parse("{\"path\":\"/tutorial/client/install.html\",\"title\":\"安装客户端\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"安装客户端\",\"icon\":\"icon-build\",\"order\":1,\"author\":\"FyrGlow\",\"date\":\"2024-03-03T00:00:00.000Z\",\"category\":[\"客户端教程\"],\"tag\":[\"安装\"],\"sticky\":true,\"star\":true,\"footer\":\"安装客户端\",\"copyright\":\"PaperCard Docs\",\"description\":\"警告： 为了您的服务器体验请优先选择使用服务器指定客户端！ PaperCard Client (进阶版) 专为有自研能力且懂得自定义配置者开发！ PaperCard Client Lite (精简版) 为大众向整合包，小白推荐用这个！ 注意： PaperCard Client(以下简称PCC)和PaperCard Client Lite(以下简称PCC...\",\"head\":[[\"meta\",{\"property\":\"og:url\",\"content\":\"https://asev.gitee.io/tutorial/client/install.html\"}],[\"meta\",{\"property\":\"og:site_name\",\"content\":\"PaperCard Docs\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"安装客户端\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"警告： 为了您的服务器体验请优先选择使用服务器指定客户端！ PaperCard Client (进阶版) 专为有自研能力且懂得自定义配置者开发！ PaperCard Client Lite (精简版) 为大众向整合包，小白推荐用这个！ 注意： PaperCard Client(以下简称PCC)和PaperCard Client Lite(以下简称PCC...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://asev.gitee.io/pic/版本设置.png\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"zh-CN\"}],[\"meta\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"meta\",{\"name\":\"twitter:image:alt\",\"content\":\"安装客户端\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"FyrGlow\"}],[\"meta\",{\"property\":\"article:tag\",\"content\":\"安装\"}],[\"meta\",{\"property\":\"article:published_time\",\"content\":\"2024-03-03T00:00:00.000Z\"}],[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"安装客户端\\\",\\\"image\\\":[\\\"https://asev.gitee.io/pic/版本设置.png\\\",\\\"https://asev.gitee.io/pic/版本文件夹.png\\\",\\\"https://asev.gitee.io/pic/文件目录.png\\\",\\\"https://asev.gitee.io/pic/替换.png\\\"],\\\"datePublished\\\":\\\"2024-03-03T00:00:00.000Z\\\",\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"FyrGlow\\\"}]}\"]]},\"headers\":[{\"level\":2,\"title\":\"PCC & PCCL (必看)\",\"slug\":\"pcc-pccl-必看\",\"link\":\"#pcc-pccl-必看\",\"children\":[{\"level\":3,\"title\":\"视频介绍\",\"slug\":\"视频介绍\",\"link\":\"#视频介绍\",\"children\":[]},{\"level\":3,\"title\":\"Mod介绍\",\"slug\":\"mod介绍\",\"link\":\"#mod介绍\",\"children\":[]}]},{\"level\":2,\"title\":\"下载及安装教程\",\"slug\":\"下载及安装教程\",\"link\":\"#下载及安装教程\",\"children\":[]},{\"level\":2,\"title\":\"客户端小知识\",\"slug\":\"客户端小知识\",\"link\":\"#客户端小知识\",\"children\":[{\"level\":3,\"title\":\"每次更新都需要重新配置按键怎么办？\",\"slug\":\"每次更新都需要重新配置按键怎么办\",\"link\":\"#每次更新都需要重新配置按键怎么办\",\"children\":[]}]}],\"readingTime\":{\"minutes\":3.05,\"words\":915},\"filePathRelative\":\"tutorial/client/install.md\",\"localizedDate\":\"2024年3月3日\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

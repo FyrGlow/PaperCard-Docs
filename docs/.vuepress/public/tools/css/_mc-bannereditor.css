@@ -1,0 +1,2026 @@
+textarea:active,
+textarea:focus {
+    background-color: var(--bs-white);
+    border-color: #222 !important;
+    border-radius: 8px;
+    box-shadow: 0 0 0 .1rem #222 !important;
+    color: var(--bs-dark)
+}
+
+#minecraftbanner .layers-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around
+}
+
+#minecraftbanner .hidden {
+    background: url("../img/flags/black.png")
+        /*tpa=https://skinmc.net/img/flags/black.png*/
+        , url("../img/flags/sm/black.png")
+        /*tpa=https://skinmc.net/img/flags/sm/black.png*/
+        , url("../img/flags/dark_gray.png")
+        /*tpa=https://skinmc.net/img/flags/dark_gray.png*/
+        , url("../img/flags/sm/dark_gray.png")
+        /*tpa=https://skinmc.net/img/flags/sm/dark_gray.png*/
+        , url("../img/flags/gray.png")
+        /*tpa=https://skinmc.net/img/flags/gray.png*/
+        , url("../img/flags/sm/gray.png")
+        /*tpa=https://skinmc.net/img/flags/sm/gray.png*/
+        , url("../img/flags/white.png")
+        /*tpa=https://skinmc.net/img/flags/white.png*/
+        , url("../img/flags/sm/white.png")
+        /*tpa=https://skinmc.net/img/flags/sm/white.png*/
+        , url("../img/flags/pink.png")
+        /*tpa=https://skinmc.net/img/flags/pink.png*/
+        , url("../img/flags/sm/pink.png")
+        /*tpa=https://skinmc.net/img/flags/sm/pink.png*/
+        , url("../img/flags/magenta.png")
+        /*tpa=https://skinmc.net/img/flags/magenta.png*/
+        , url("../img/flags/sm/magenta.png")
+        /*tpa=https://skinmc.net/img/flags/sm/magenta.png*/
+        , url("../img/flags/purple.png")
+        /*tpa=https://skinmc.net/img/flags/purple.png*/
+        , url("../img/flags/sm/purple.png")
+        /*tpa=https://skinmc.net/img/flags/sm/purple.png*/
+        , url("../img/flags/blue.png")
+        /*tpa=https://skinmc.net/img/flags/blue.png*/
+        , url("../img/flags/sm/blue.png")
+        /*tpa=https://skinmc.net/img/flags/sm/blue.png*/
+        , url("../img/flags/cyan.png")
+        /*tpa=https://skinmc.net/img/flags/cyan.png*/
+        , url("../img/flags/sm/cyan.png")
+        /*tpa=https://skinmc.net/img/flags/sm/cyan.png*/
+        , url("../img/flags/light_blue.png")
+        /*tpa=https://skinmc.net/img/flags/light_blue.png*/
+        , url("../img/flags/sm/light_blue.png")
+        /*tpa=https://skinmc.net/img/flags/sm/light_blue.png*/
+        , url("../img/flags/green.png")
+        /*tpa=https://skinmc.net/img/flags/green.png*/
+        , url("../img/flags/sm/green.png")
+        /*tpa=https://skinmc.net/img/flags/sm/green.png*/
+        , url("../img/flags/lime.png")
+        /*tpa=https://skinmc.net/img/flags/lime.png*/
+        , url("../img/flags/sm/lime.png")
+        /*tpa=https://skinmc.net/img/flags/sm/lime.png*/
+        , url("../img/flags/yellow.png")
+        /*tpa=https://skinmc.net/img/flags/yellow.png*/
+        , url("../img/flags/sm/yellow.png")
+        /*tpa=https://skinmc.net/img/flags/sm/yellow.png*/
+        , url("../img/flags/orange.png")
+        /*tpa=https://skinmc.net/img/flags/orange.png*/
+        , url("../img/flags/sm/orange.png")
+        /*tpa=https://skinmc.net/img/flags/sm/orange.png*/
+        , url("../img/flags/brown.png")
+        /*tpa=https://skinmc.net/img/flags/brown.png*/
+        , url("../img/flags/sm/brown.png")
+        /*tpa=https://skinmc.net/img/flags/sm/brown.png*/
+        , url("../img/flags/red.png")
+        /*tpa=https://skinmc.net/img/flags/red.png*/
+        , url("../img/flags/sm/red.png")
+        /*tpa=https://skinmc.net/img/flags/sm/red.png*/
+    ;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0
+}
+
+#minecraftbanner #main>div {
+    white-space: nowrap
+}
+
+#minecraftbanner #main>div>* {
+    white-space: normal
+}
+
+#minecraftbanner .jeb {
+    color: #bbb;
+    display: inline-block;
+    font-size: 10px;
+    margin-left: 4px;
+    vertical-align: top;
+    width: 250px
+}
+
+#minecraftbanner .bchestex:before {
+    display: none
+}
+
+#minecraftbanner .toolbar-container {
+    width: 50%
+}
+
+#minecraftbanner #canvas {
+    background: #fff;
+    height: 320px;
+    padding: 8px;
+    position: relative;
+    width: 160px
+}
+
+#minecraftbanner #canvas i {
+    left: 8px;
+    position: absolute;
+    top: 8px
+}
+
+#minecraftbanner #base-overlay {
+    background: url("../img/flags/bg_base.png")
+        /*tpa=https://skinmc.net/img/flags/bg_base.png*/
+        no-repeat;
+    z-index: 3
+}
+
+#minecraftbanner #base-overlay,
+#minecraftbanner #preview {
+    display: inline-block;
+    height: 320px;
+    left: 9px;
+    position: absolute;
+    top: 9px;
+    width: 160px
+}
+
+#minecraftbanner #preview {
+    z-index: 2
+}
+
+#minecraftbanner .canv-tool {
+    margin: 6px 0;
+    position: relative
+}
+
+#minecraftbanner .canv-tool div {
+    vertical-align: top
+}
+
+#minecraftbanner .canv-tool .clearall {
+    position: absolute;
+    right: 0
+}
+
+#minecraftbanner .url-desc {
+    background: hsla(0, 0%, 100%, .7);
+    color: #444;
+    font-size: 12px;
+    line-height: 23px;
+    padding: 0 8px;
+    vertical-align: middle
+}
+
+#minecraftbanner #toolbar-colors {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    line-height: 10px;
+    text-align: center
+}
+
+#minecraftbanner .tbc {
+    background: url("../img/flags/bg.png")
+        /*tpa=https://skinmc.net/img/flags/bg.png*/
+    ;
+    box-shadow: 0 0 0 1px rgba(50, 50, 50, .25);
+    height: 40px;
+    image-rendering: pixelated;
+    width: 20px
+}
+
+#minecraftbanner #toolbar .tbc {
+    background: url("../img/flags/bg.png")
+        /*tpa=https://skinmc.net/img/flags/bg.png*/
+        50% 50% repeat-y;
+    border-color: #fff;
+    cursor: pointer;
+    height: 40px;
+    image-rendering: pixelated;
+    width: auto
+}
+
+#minecraftbanner #toolbar .tbc:hover,
+#minecraftbanner .saved-unit:hover {
+    border-radius: 3px !important;
+    box-shadow: 0 0 0 .1rem #fff, 0 0 0 .25rem #222 !important
+}
+
+#minecraftbanner .toolbar-color {
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    height: 24px;
+    width: 24px
+}
+
+#minecraftbanner .toolbar-color.sel {
+    border-color: #222 !important;
+    border-radius: 6px;
+    box-shadow: 0 0 0 .1rem #fff, 0 0 0 .25rem #222 !important;
+    color: var(--bs-dark)
+}
+
+#minecraftbanner #toolbar-patterns {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    gap: 6px
+}
+
+#minecraftbanner #toolbar-patterns i {
+    cursor: pointer;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner .compact+div {
+    min-height: 290px !important
+}
+
+#minecraftbanner .compact+div .layer {
+    border-bottom: none;
+    height: 40px;
+    margin-bottom: 0;
+    padding: 0 4px 0 12px !important
+}
+
+#minecraftbanner .compact+div .layer:last-child {
+    border-bottom: inherit;
+    margin-bottom: 0;
+    padding: 0 4px 0 12px !important
+}
+
+#minecraftbanner .compact+div .layer-pattern {
+    border-bottom: none;
+    border-top: none
+}
+
+#minecraftbanner .compact+div .layer-craft {
+    display: none
+}
+
+#minecraftbanner .compact+div .layer-up {
+    margin-top: 2px
+}
+
+#minecraftbanner .compact+div .layer-down {
+    margin-bottom: 2px
+}
+
+#minecraftbanner .compact+div .layer-del {
+    margin-top: 3px
+}
+
+#minecraftbanner #layers {
+    display: inline-block;
+    transition: height .2s ease;
+    width: 100%
+}
+
+#minecraftbanner .sortable-ghost {
+    border-radius: 12px;
+    opacity: .3
+}
+
+#minecraftbanner .layer {
+    border: 1px solid transparent;
+    border-radius: 12px;
+    display: flex;
+    margin-bottom: 1px;
+    overflow: visible;
+    padding: 4px 4px 4px 24px;
+    position: relative;
+    transition: height .2s ease, padding .2s ease
+}
+
+#minecraftbanner .layer:hover {
+    border: 1px solid #dee2e6
+}
+
+#minecraftbanner .layer .layer-del,
+#minecraftbanner .layer .layer-drag,
+#minecraftbanner .layer .layer-move,
+#minecraftbanner .layer .layer-visable {
+    display: none
+}
+
+#minecraftbanner .layer:hover .layer-del,
+#minecraftbanner .layer:hover .layer-drag,
+#minecraftbanner .layer:hover .layer-move,
+#minecraftbanner .layer:hover .layer-visable {
+    display: flex
+}
+
+#minecraftbanner .layer:last-child {
+    margin: 0
+}
+
+#minecraftbanner .tip,
+#minecraftbanner .tip~.layer {
+    background: #fdf3f2
+}
+
+#minecraftbanner .tip:hover:after {
+    background: var(--bs-dark);
+    border-radius: 6px;
+    color: var(--bs-white);
+    content: "This design is not available after this point without the use of commands.";
+    cursor: default !important;
+    display: block;
+    font-size: 14px;
+    left: 190px;
+    padding: 4px 8px;
+    pointer-events: none;
+    position: absolute;
+    top: 42px;
+    width: 180px;
+    z-index: 1200
+}
+
+#minecraftbanner .tip:after {
+    background: var(--bs-red);
+    content: ""
+}
+
+#minecraftbanner .layer>div {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top
+}
+
+#minecraftbanner .layer-visable {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24'%3E%3Cpath d='M0 0h24v24H0V0zm0 0h24v24H0V0zm0 0h24v24H0V0zm0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M12 6a9.77 9.77 0 0 1 8.82 5.5 9.647 9.647 0 0 1-2.41 3.12l1.41 1.41c1.39-1.23 2.49-2.77 3.18-4.53C21.27 7.11 17 4 12 4c-1.27 0-2.49.2-3.64.57l1.65 1.65C10.66 6.09 11.32 6 12 6zm-1.07 1.14L13 9.21c.57.25 1.03.71 1.28 1.28l2.07 2.07c.08-.34.14-.7.14-1.07C16.5 9.01 14.48 7 12 7c-.37 0-.72.05-1.07.14zM2.01 3.87l2.68 2.68A11.738 11.738 0 0 0 1 11.5C2.73 15.89 7 19 12 19c1.52 0 2.98-.29 4.32-.82l3.42 3.42 1.41-1.41L3.42 2.45 2.01 3.87zm7.5 7.5 2.61 2.61c-.04.01-.08.02-.12.02a2.5 2.5 0 0 1-2.5-2.5c0-.05.01-.08.01-.13zm-3.4-3.4 1.75 1.75a4.6 4.6 0 0 0-.36 1.78 4.507 4.507 0 0 0 6.27 4.14l.98.98c-.88.24-1.8.38-2.75.38a9.77 9.77 0 0 1-8.82-5.5c.7-1.43 1.72-2.61 2.93-3.53z'/%3E%3C/svg%3E");
+    background-size: cover;
+    height: 18px;
+    margin: auto 0 auto 4px !important;
+    vertical-align: middle !important;
+    width: 18px
+}
+
+#minecraftbanner .layer-visable.sel {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M12 6a9.77 9.77 0 0 1 8.82 5.5C19.17 14.87 15.79 17 12 17s-7.17-2.13-8.82-5.5A9.77 9.77 0 0 1 12 6m0-2C7 4 2.73 7.11 1 11.5 2.73 15.89 7 19 12 19s9.27-3.11 11-7.5C21.27 7.11 17 4 12 4zm0 5a2.5 2.5 0 0 1 0 5 2.5 2.5 0 0 1 0-5m0-2c-2.48 0-4.5 2.02-4.5 4.5S9.52 16 12 16s4.5-2.02 4.5-4.5S14.48 7 12 7z'/%3E%3C/svg%3E")
+}
+
+#minecraftbanner .dragable {
+    position: relative
+}
+
+#minecraftbanner .dragable:before {
+    background: hsla(0, 0%, 100%, .5);
+    border-radius: 12px !important;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10
+}
+
+#minecraftbanner .hidden,
+#minecraftbanner .hiddeno,
+#minecraftbanner .visable.dragable:before {
+    display: none !important
+}
+
+#minecraftbanner .layer-pattern {
+    background: url("../img/flags/bg.png")
+        /*tpa=https://skinmc.net/img/flags/bg.png*/
+    ;
+    height: 40px;
+    margin-top: 1px;
+    position: relative;
+    width: 20px
+}
+
+#minecraftbanner .layer-pattern>i {
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner .layer-color {
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 6px;
+    height: 32px;
+    left: 8px;
+    position: absolute !important;
+    top: 9px;
+    width: 6px
+}
+
+#minecraftbanner .layer-hover {
+    background: #fff;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 12px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    cursor: auto;
+    display: none;
+    flex-direction: column;
+    height: auto;
+    left: 0;
+    opacity: 0;
+    padding: 1.5rem !important;
+    position: absolute;
+    top: 32px;
+    transition: opacity .1s ease-in-out 0s;
+    visibility: hidden;
+    white-space: nowrap;
+    width: 330px;
+    z-index: 1200
+}
+
+#minecraftbanner .layer-hover>div {
+    white-space: normal
+}
+
+#minecraftbanner .layer-pattern:hover {
+    border-radius: 3px;
+    box-shadow: 0 0 0 .1rem #fff, 0 0 0 .25rem #222 !important
+}
+
+#minecraftbanner .layer-hover:hover,
+#minecraftbanner .layer-pattern:hover .layer-hover {
+    display: flex;
+    opacity: 1;
+    visibility: visible
+}
+
+#minecraftbanner .layer-color-container {
+    border-bottom: 1px solid #dee2e6 !important;
+    margin-bottom: 12px;
+    padding-bottom: 12px
+}
+
+#minecraftbanner .layer-color-container,
+#minecraftbanner .layer-pattern-container {
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    width: 100%
+}
+
+#minecraftbanner .layer-pattern-container i {
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner #layers .layer:first-child .layer-pattern-container {
+    display: none !important
+}
+
+#minecraftbanner #layers .layer:first-child .layer-hover {
+    left: 4px;
+    left: auto;
+    top: 26px
+}
+
+#minecraftbanner .crafting-table {
+    cursor: auto;
+    font-size: 0;
+    line-height: 0;
+    margin-left: 14px;
+    width: 45px
+}
+
+#minecraftbanner .crafting-item {
+    background-color: #ddd !important;
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .3);
+    display: inline-block;
+    font-size: 12px;
+    height: 13px;
+    margin-bottom: 1px;
+    margin-left: 1px;
+    overflow: visible !important;
+    padding: 0;
+    position: relative;
+    vertical-align: top;
+    width: 13px
+}
+
+#minecraftbanner .layer-drag {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' height='48' width='48'%3E%3Cpath d='M17.5 40q-1.45 0-2.475-1.025Q14 37.95 14 36.5q0-1.45 1.025-2.475Q16.05 33 17.5 33q1.45 0 2.475 1.025Q21 35.05 21 36.5q0 1.45-1.025 2.475Q18.95 40 17.5 40Zm0-12.5q-1.45 0-2.475-1.025Q14 25.45 14 24q0-1.45 1.025-2.475Q16.05 20.5 17.5 20.5q1.45 0 2.475 1.025Q21 22.55 21 24q0 1.45-1.025 2.475Q18.95 27.5 17.5 27.5Zm0-12.5q-1.45 0-2.475-1.025Q14 12.95 14 11.5q0-1.45 1.025-2.475Q16.05 8 17.5 8q1.45 0 2.475 1.025Q21 10.05 21 11.5q0 1.45-1.025 2.475Q18.95 15 17.5 15Zm13 0q-1.45 0-2.475-1.025Q27 12.95 27 11.5q0-1.45 1.025-2.475Q29.05 8 30.5 8q1.45 0 2.475 1.025Q34 10.05 34 11.5q0 1.45-1.025 2.475Q31.95 15 30.5 15Zm0 12.5q-1.45 0-2.475-1.025Q27 25.45 27 24q0-1.45 1.025-2.475Q29.05 20.5 30.5 20.5q1.45 0 2.475 1.025Q34 22.55 34 24q0 1.45-1.025 2.475Q31.95 27.5 30.5 27.5Zm0 12.5q-1.45 0-2.475-1.025Q27 37.95 27 36.5q0-1.45 1.025-2.475Q29.05 33 30.5 33q1.45 0 2.475 1.025Q34 35.05 34 36.5q0 1.45-1.025 2.475Q31.95 40 30.5 40Z'/%3E%3C/svg%3E");
+    background-size: cover;
+    cursor: move !important;
+    float: right;
+    height: 24px;
+    margin-right: 6px;
+    margin: auto 0 !important;
+    width: 24px
+}
+
+#minecraftbanner .layer-move {
+    cursor: auto !important;
+    float: right;
+    height: 32px;
+    margin: auto 0 !important;
+    position: relative;
+    width: 16px
+}
+
+#minecraftbanner .layer-down,
+#minecraftbanner .layer-up {
+    cursor: pointer;
+    height: 16px;
+    text-align: center;
+    width: 16px
+}
+
+#minecraftbanner .layer-up {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='m12 8-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14l-6-6z'/%3E%3C/svg%3E");
+    background-size: cover;
+    position: absolute;
+    top: 0
+}
+
+#minecraftbanner .layer-down {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24'%3E%3Cpath d='M24 24H0V0h24v24z' fill='none' opacity='.87'/%3E%3Cpath d='M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z'/%3E%3C/svg%3E");
+    background-size: cover;
+    bottom: 0;
+    position: absolute
+}
+
+#minecraftbanner .layer-del {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z'/%3E%3C/svg%3E");
+    background-size: cover;
+    height: 16px;
+    margin: 12px 0 0 auto;
+    width: 16px
+}
+
+#minecraftbanner .layer-del:hover {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24' fill='%23e3342f'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z'/%3E%3C/svg%3E")
+}
+
+#minecraftbanner #total {
+    display: flex;
+    flex-flow: wrap;
+    font-size: 12px;
+    line-height: 20px;
+    white-space: normal
+}
+
+#minecraftbanner #total .crafting-item {
+    background-color: var(--bg-light) !important;
+    box-shadow: none;
+    margin: auto 0
+}
+
+#minecraftbanner #total span {
+    margin-right: 6px
+}
+
+#minecraftbanner #total>div {
+    background: var(--bs-white);
+    border-radius: 8px;
+    display: flex;
+    margin: 2px 4px 2px 0;
+    padding: 2px 6px
+}
+
+#minecraftbanner #total>div>div {
+    white-space: nowrap
+}
+
+#minecraftbanner .bred {
+    background: #d85248
+}
+
+#minecraftbanner .borange {
+    background: #ce893a
+}
+
+#minecraftbanner #saved {
+    position: relative
+}
+
+#minecraftbanner #saved.off:after {
+    background: hsla(0, 0%, 100%, .7);
+    color: #bbb;
+    content: "Not available in this browser";
+    display: block;
+    height: 100%;
+    left: 0;
+    line-height: 48px;
+    padding: 16px 0 0;
+    position: absolute;
+    text-align: center;
+    top: -16px;
+    width: 100%;
+    z-index: 5
+}
+
+#minecraftbanner #saved,
+#minecraftbanner #saved-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px
+}
+
+#minecraftbanner #saved-gallery {
+    display: block;
+    position: relative
+}
+
+#minecraftbanner #saved-gallery .saved-unit {
+    height: 40px;
+    margin: 2px 2px 2px 3px;
+    position: relative;
+    width: 20px
+}
+
+#minecraftbanner #saved .saved-unit {
+    cursor: pointer;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 1px;
+    min-width: 20px;
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+    width: 20px
+}
+
+#minecraftbanner .saved-add {
+    background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M800-663.077v438.462Q800-197 781.5-178.5 763-160 735.385-160h-510.77Q197-160 178.5-178.5 160-197 160-224.615v-510.77Q160-763 178.5-781.5 197-800 224.615-800h438.462L800-663.077ZM760-646 646-760H224.615q-10.769 0-17.692 6.923T200-735.385v510.77q0 10.769 6.923 17.692T224.615-200h510.77q10.769 0 17.692-6.923T760-224.615V-646ZM480-298.461q33.077 0 56.539-23.462Q560-345.384 560-378.461T536.539-435Q513.077-458.462 480-458.462T423.461-435Q400-411.538 400-378.461t23.461 56.538q23.462 23.462 56.539 23.462Zm-209.231-270.77h296.924v-120H270.769v120ZM200-646v446-560 114Z"/></svg>');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    height: 24px;
+    margin: auto 0;
+    position: relative;
+    width: 24px
+}
+
+#minecraftbanner .saved-addall {
+    height: 32px !important;
+    line-height: 16px !important;
+    padding: 4px 0
+}
+
+#minecraftbanner .saved-addall:after {
+    content: "URL";
+    display: block;
+    font-size: 10px;
+    text-align: center;
+    width: 100%
+}
+
+#minecraftbanner .saved-unit {
+    display: inline-block
+}
+
+#minecraftbanner .saved-unit i {
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+#minecraftbanner .saved-unit-tool {
+    background: #fff;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 32px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    display: none;
+    height: 30px;
+    padding: 4px;
+    position: relative;
+    right: -8px;
+    top: -18px;
+    width: 30px;
+    z-index: 100
+}
+
+#minecraftbanner .saved-unit:hover .saved-unit-tool {
+    display: block
+}
+
+#minecraftbanner .saved-unit-tool div {
+    background-color: #fff;
+    height: 20px;
+    width: 20px
+}
+
+#minecraftbanner .saved-unit-del {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z'/%3E%3C/svg%3E");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20px;
+    position: relative;
+    width: 20px
+}
+
+#minecraftbanner .saved-unit-tool:hover .saved-unit-del {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24' fill='%23e3342f'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z'/%3E%3C/svg%3E")
+}
+
+#minecraftbanner .pp {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 6px;
+    text-align: left;
+    vertical-align: middle
+}
+
+#minecraftbanner .pp form {
+    display: inline-block;
+    height: 24px;
+    vertical-align: middle
+}
+
+#minecraftbanner .pp span {
+    color: #666;
+    display: inline-block;
+    font-size: 12px;
+    padding: 0 0 0 4px;
+    vertical-align: middle
+}
+
+#minecraftbanner #canvas-wave {
+    display: inline-block;
+    position: relative
+}
+
+#minecraftbanner .bannerAnimation .bgp+.header {
+    display: none
+}
+
+#minecraftbanner .bannerAnimation #canvas-skew {
+    padding: 0 8px;
+    perspective: 1400px;
+    perspective-origin: 200% 20%;
+    position: relative;
+    text-align: center;
+    transform: rotateY(-7deg);
+    transform-origin: 100% 50%;
+    transform-style: preserve-3d
+}
+
+#minecraftbanner .bannerAnimation #canvas-wave {
+    animation: wave 5s ease-in-out infinite;
+    border: none !important;
+    position: relative;
+    transform-origin: 50% 0
+}
+
+@-safari-keyframes wave {
+    0% {
+        transform: rotateX(0deg)
+    }
+
+    50% {
+        transform: rotateX(-6deg)
+    }
+
+    to {
+        transform: rotateX(0deg)
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: rotateX(0deg)
+    }
+
+    50% {
+        transform: rotateX(-6deg)
+    }
+
+    to {
+        transform: rotateX(0deg)
+    }
+}
+
+@-safari-keyframes light {
+    0% {
+        background: hsla(0, 0%, 100%, .05)
+    }
+
+    50% {
+        background: rgba(0, 0, 0, .05)
+    }
+
+    to {
+        background: hsla(0, 0%, 100%, .05)
+    }
+}
+
+@keyframes light {
+    0% {
+        background: hsla(0, 0%, 100%, .05)
+    }
+
+    50% {
+        background: rgba(0, 0, 0, .05)
+    }
+
+    to {
+        background: hsla(0, 0%, 100%, .05)
+    }
+}
+
+@-safari-keyframes border {
+    0% {
+        border-radius: 0 0 1px 0
+    }
+
+    50% {
+        border-radius: 0 0 4px 0
+    }
+
+    to {
+        border-radius: 0 0 1px 0
+    }
+}
+
+@keyframes border {
+    0% {
+        border-radius: 0 0 1px 0
+    }
+
+    50% {
+        border-radius: 0 0 4px 0
+    }
+
+    to {
+        border-radius: 0 0 1px 0
+    }
+}
+
+#minecraftbanner .bannerAnimation #canvas-wave div,
+#minecraftbanner .bannerAnimation #canvas-wave i {
+    border: none;
+    left: 0;
+    padding: 0;
+    top: 0
+}
+
+#minecraftbanner .bannerAnimation #preview {
+    animation: light 5s ease-in-out infinite
+}
+
+#minecraftbanner .bannerAnimation .bgp {
+    background: url("../img/flags/bgp.jpg-=mew")
+        /*tpa=https://skinmc.net/img/flags/bgp.jpg?=mew*/
+    ;
+    height: 706px;
+    left: -252px;
+    position: absolute;
+    top: -207px;
+    width: 1055px;
+    z-index: -1
+}
+
+#minecraftbanner .bannerAnimation #canvas i[pattern=base] {
+    animation: border 5s ease-in-out infinite;
+    overflow: hidden
+}
+
+#minecraftbanner .bannerAnimation #canvas i[pattern=base][color="0"] {
+    border-right: 3px solid #121212 !important
+}
+
+#minecraftbanner .bannerAnimation #canvas i[pattern=base][color="1"] {
+    border-right: 3px solid #6e2525 !important
+}
+
+#minecraftbanner .bannerAnimation #canvas i[pattern=base][color="2"] {
+    border-right: 3px solid #495b25 !important
+}
+
+#minecraftbanner .bannerAnimation #canvas i[pattern=base][color="3"] {
+    border-right: 3px solid #4a3725 !important
+}
+
+#minecraftbanner .bannerAnimation #canvas i[pattern=base][color="4"] {
+    border-right: 3px solid #24367e !important
+}
+
+#minecraftbanner .bannerAnimation #canvas i[pattern=base][color="5"] {
+    border-right: 3px solid #5b2d7f !important
+}
+
+#minecraftbanner .bannerAnimation #canvas i[pattern=base][color="6"] {
+    border-right: 3px solid #365a6d !important
+}
+
+#minecraftbanner .bannerAnimation #canvas i[pattern=base][color="7"] {
+    border-right: 3px solid #6e6e6e !important
+}
+
+#minecraftbanner .bannerAnimation #canvas i[pattern=base][color="8"] {
+    border-right: 3px solid #363636 !important
+}
+
+#minecraftbanner .bannerAnimation #canvas i[pattern=base][color="9"] {
+    border-right: 3px solid #b05d78 !important
+}
+
+#minecraftbanner .bannerAnimation #canvas i[pattern=base][color="10"] {
+    border-right: 3px solid #5b9212 !important
+}
+
+#minecraftbanner .bannerAnimation #canvas i[pattern=base][color="11"] {
+    border-right: 3px solid #a6a625 !important
+}
+
+#minecraftbanner .bannerAnimation #canvas i[pattern=base][color="12"] {
+    border-right: 3px solid #4a6f9e !important
+}
+
+#minecraftbanner .bannerAnimation #canvas i[pattern=base][color="13"] {
+    border-right: 3px solid #80369b !important
+}
+
+#minecraftbanner .bannerAnimation #canvas i[pattern=base][color="14"] {
+    border-right: 3px solid #9e5d25 !important
+}
+
+#minecraftbanner .bannerAnimation #canvas i[pattern=base][color="15"] {
+    border-right: 3px solid #b6b6b6 !important
+}
+
+#minecraftbanner .black {
+    background: #191919
+}
+
+#minecraftbanner .light_blue {
+    background: #6699d8
+}
+
+#minecraftbanner .green {
+    background: #667f33
+}
+
+#minecraftbanner .cyan {
+    background: #4c7f99
+}
+
+#minecraftbanner .purple {
+    background: #7f3fb2
+}
+
+#minecraftbanner .magenta {
+    background: #b24cd8
+}
+
+#minecraftbanner .orange {
+    background: #d87f33
+}
+
+#minecraftbanner .gray {
+    background: #999
+}
+
+#minecraftbanner .dark_gray {
+    background: #4c4c4c
+}
+
+#minecraftbanner .blue {
+    background: #334cb2
+}
+
+#minecraftbanner .lime {
+    background: #7fcc19
+}
+
+#minecraftbanner .red {
+    background: #933
+}
+
+#minecraftbanner .pink {
+    background: #f27fa5
+}
+
+#minecraftbanner .yellow {
+    background: #e5e533
+}
+
+#minecraftbanner .brown {
+    background: #664c33
+}
+
+#minecraftbanner .white {
+    background: #fff
+}
+
+#minecraftbanner i {
+    display: inline-block;
+    image-rendering: pixelated
+}
+
+#minecraftbanner i[color="0"] {
+    background: url("../img/flags/black.png")
+        /*tpa=https://skinmc.net/img/flags/black.png*/
+}
+
+#minecraftbanner i[color="1"] {
+    background: url("../img/flags/red.png")
+        /*tpa=https://skinmc.net/img/flags/red.png*/
+}
+
+#minecraftbanner i[color="2"] {
+    background: url("../img/flags/green.png")
+        /*tpa=https://skinmc.net/img/flags/green.png*/
+}
+
+#minecraftbanner i[color="3"] {
+    background: url("../img/flags/brown.png")
+        /*tpa=https://skinmc.net/img/flags/brown.png*/
+}
+
+#minecraftbanner i[color="4"] {
+    background: url("../img/flags/blue.png")
+        /*tpa=https://skinmc.net/img/flags/blue.png*/
+}
+
+#minecraftbanner i[color="5"] {
+    background: url("../img/flags/purple.png")
+        /*tpa=https://skinmc.net/img/flags/purple.png*/
+}
+
+#minecraftbanner i[color="6"] {
+    background: url("../img/flags/cyan.png")
+        /*tpa=https://skinmc.net/img/flags/cyan.png*/
+}
+
+#minecraftbanner i[color="7"] {
+    background: url("../img/flags/gray.png")
+        /*tpa=https://skinmc.net/img/flags/gray.png*/
+}
+
+#minecraftbanner i[color="8"] {
+    background: url("../img/flags/dark_gray.png")
+        /*tpa=https://skinmc.net/img/flags/dark_gray.png*/
+}
+
+#minecraftbanner i[color="9"] {
+    background: url("../img/flags/pink.png")
+        /*tpa=https://skinmc.net/img/flags/pink.png*/
+}
+
+#minecraftbanner i[color="10"] {
+    background: url("../img/flags/lime.png")
+        /*tpa=https://skinmc.net/img/flags/lime.png*/
+}
+
+#minecraftbanner i[color="11"] {
+    background: url("../img/flags/yellow.png")
+        /*tpa=https://skinmc.net/img/flags/yellow.png*/
+}
+
+#minecraftbanner i[color="12"] {
+    background: url("../img/flags/light_blue.png")
+        /*tpa=https://skinmc.net/img/flags/light_blue.png*/
+}
+
+#minecraftbanner i[color="13"] {
+    background: url("../img/flags/magenta.png")
+        /*tpa=https://skinmc.net/img/flags/magenta.png*/
+}
+
+#minecraftbanner i[color="14"] {
+    background: url("../img/flags/orange.png")
+        /*tpa=https://skinmc.net/img/flags/orange.png*/
+}
+
+#minecraftbanner i[color="15"] {
+    background: url("../img/flags/white.png")
+        /*tpa=https://skinmc.net/img/flags/white.png*/
+}
+
+#minecraftbanner i[pattern=base] {
+    background-position: 0 0;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner .toolbar-pattern[pattern=base]:after {
+    background: url("../img/flags/bg_base_sm.png")
+        /*tpa=https://skinmc.net/img/flags/bg_base_sm.png*/
+        repeat scroll 0 0 transparent;
+    content: "";
+    display: block;
+    height: 40px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 20px;
+    z-index: 25
+}
+
+#minecraftbanner i[pattern=bl] {
+    background-position: -160px 0;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=bo] {
+    background-position: -320px 0;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=br] {
+    background-position: -480px 0;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=bri] {
+    background-position: -640px 0;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=bs] {
+    background-position: 0 -320px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=bt] {
+    background-position: -160px -320px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=bts] {
+    background-position: -320px -320px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=cbo] {
+    background-position: -480px -320px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=cr] {
+    background-position: -640px -320px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=cre] {
+    background-position: 0 -640px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=cs] {
+    background-position: -160px -640px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=dls] {
+    background-position: -320px -640px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=drs] {
+    background-position: -480px -640px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=flo] {
+    background-position: -640px -640px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=gra] {
+    background-position: 0 -960px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=hh] {
+    background-position: -160px -960px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=ld] {
+    background-position: -320px -960px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=ls] {
+    background-position: -480px -960px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=mc] {
+    background-position: -640px -960px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=moj] {
+    background-position: 0 -1280px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=mr] {
+    background-position: -160px -1280px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=ms] {
+    background-position: -320px -1280px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=rud] {
+    background-position: -480px -1280px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=rs] {
+    background-position: -640px -1280px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=sc] {
+    background-position: 0 -1600px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=sku] {
+    background-position: -160px -1600px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=ss] {
+    background-position: -320px -1600px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=tl] {
+    background-position: -480px -1600px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=tr] {
+    background-position: -640px -1600px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=ts] {
+    background-position: 0 -1920px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=tt] {
+    background-position: -160px -1920px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=tts] {
+    background-position: -320px -1920px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=vh] {
+    background-position: -480px -1920px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=gru] {
+    background-position: -640px -1920px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=vhr] {
+    background-position: 0 -2240px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=hhb] {
+    background-position: -160px -2240px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=lud] {
+    background-position: -320px -2240px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i[pattern=rd] {
+    background-position: -480px -2240px;
+    height: 320px;
+    width: 160px
+}
+
+#minecraftbanner i.toolbar-pattern[color="0"] {
+    background: url("../img/flags/sm/black.png")
+        /*tpa=https://skinmc.net/img/flags/sm/black.png*/
+}
+
+#minecraftbanner i.toolbar-pattern[color="1"] {
+    background: url("../img/flags/sm/red.png")
+        /*tpa=https://skinmc.net/img/flags/sm/red.png*/
+}
+
+#minecraftbanner i.toolbar-pattern[color="2"] {
+    background: url("../img/flags/sm/green.png")
+        /*tpa=https://skinmc.net/img/flags/sm/green.png*/
+}
+
+#minecraftbanner i.toolbar-pattern[color="3"] {
+    background: url("../img/flags/sm/brown.png")
+        /*tpa=https://skinmc.net/img/flags/sm/brown.png*/
+}
+
+#minecraftbanner i.toolbar-pattern[color="4"] {
+    background: url("../img/flags/sm/blue.png")
+        /*tpa=https://skinmc.net/img/flags/sm/blue.png*/
+}
+
+#minecraftbanner i.toolbar-pattern[color="5"] {
+    background: url("../img/flags/sm/purple.png")
+        /*tpa=https://skinmc.net/img/flags/sm/purple.png*/
+}
+
+#minecraftbanner i.toolbar-pattern[color="6"] {
+    background: url("../img/flags/sm/cyan.png")
+        /*tpa=https://skinmc.net/img/flags/sm/cyan.png*/
+}
+
+#minecraftbanner i.toolbar-pattern[color="7"] {
+    background: url("../img/flags/sm/gray.png")
+        /*tpa=https://skinmc.net/img/flags/sm/gray.png*/
+}
+
+#minecraftbanner i.toolbar-pattern[color="8"] {
+    background: url("../img/flags/sm/dark_gray.png")
+        /*tpa=https://skinmc.net/img/flags/sm/dark_gray.png*/
+}
+
+#minecraftbanner i.toolbar-pattern[color="9"] {
+    background: url("../img/flags/sm/pink.png")
+        /*tpa=https://skinmc.net/img/flags/sm/pink.png*/
+}
+
+#minecraftbanner i.toolbar-pattern[color="10"] {
+    background: url("../img/flags/sm/lime.png")
+        /*tpa=https://skinmc.net/img/flags/sm/lime.png*/
+}
+
+#minecraftbanner i.toolbar-pattern[color="11"] {
+    background: url("../img/flags/sm/yellow.png")
+        /*tpa=https://skinmc.net/img/flags/sm/yellow.png*/
+}
+
+#minecraftbanner i.toolbar-pattern[color="12"] {
+    background: url("../img/flags/sm/light_blue.png")
+        /*tpa=https://skinmc.net/img/flags/sm/light_blue.png*/
+}
+
+#minecraftbanner i.toolbar-pattern[color="13"] {
+    background: url("../img/flags/sm/magenta.png")
+        /*tpa=https://skinmc.net/img/flags/sm/magenta.png*/
+}
+
+#minecraftbanner i.toolbar-pattern[color="14"] {
+    background: url("../img/flags/sm/orange.png")
+        /*tpa=https://skinmc.net/img/flags/sm/orange.png*/
+}
+
+#minecraftbanner i.toolbar-pattern[color="15"] {
+    background: url("../img/flags/sm/white.png")
+        /*tpa=https://skinmc.net/img/flags/sm/white.png*/
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=base] {
+    background-position: 0 0;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=bl] {
+    background-position: -20px 0;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=bo] {
+    background-position: -40px 0;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=br] {
+    background-position: -60px 0;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=bri] {
+    background-position: -80px 0;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=bs] {
+    background-position: 0 -40px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=bt] {
+    background-position: -20px -40px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=bts] {
+    background-position: -40px -40px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=cbo] {
+    background-position: -60px -40px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=cr] {
+    background-position: -80px -40px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=cre] {
+    background-position: 0 -80px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=cs] {
+    background-position: -20px -80px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=dls] {
+    background-position: -40px -80px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=drs] {
+    background-position: -60px -80px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=flo] {
+    background-position: -80px -80px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=gra] {
+    background-position: 0 -120px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=hh] {
+    background-position: -20px -120px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=ld] {
+    background-position: -40px -120px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=ls] {
+    background-position: -60px -120px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=mc] {
+    background-position: -80px -120px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=moj] {
+    background-position: 0 -160px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=mr] {
+    background-position: -20px -160px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=ms] {
+    background-position: -40px -160px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=rud] {
+    background-position: -60px -160px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=rs] {
+    background-position: -80px -160px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=sc] {
+    background-position: 0 -200px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=sku] {
+    background-position: -20px -200px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=ss] {
+    background-position: -40px -200px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=tl] {
+    background-position: -60px -200px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=tr] {
+    background-position: -80px -200px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=ts] {
+    background-position: 0 -240px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=tt] {
+    background-position: -20px -240px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=tts] {
+    background-position: -40px -240px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=vh] {
+    background-position: -60px -240px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=gru] {
+    background-position: -80px -240px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=vhr] {
+    background-position: 0 -280px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=hhb] {
+    background-position: -20px -280px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=lud] {
+    background-position: -40px -280px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner i.toolbar-pattern[pattern=rd] {
+    background-position: -60px -280px;
+    height: 40px;
+    width: 20px
+}
+
+#minecraftbanner .crafting-item.apple,
+#minecraftbanner .crafting-item.black,
+#minecraftbanner .crafting-item.blue,
+#minecraftbanner .crafting-item.bn,
+#minecraftbanner .crafting-item.brick,
+#minecraftbanner .crafting-item.brown,
+#minecraftbanner .crafting-item.creeper,
+#minecraftbanner .crafting-item.cyan,
+#minecraftbanner .crafting-item.dark_gray,
+#minecraftbanner .crafting-item.flower,
+#minecraftbanner .crafting-item.gray,
+#minecraftbanner .crafting-item.green,
+#minecraftbanner .crafting-item.light_blue,
+#minecraftbanner .crafting-item.lime,
+#minecraftbanner .crafting-item.magenta,
+#minecraftbanner .crafting-item.orange,
+#minecraftbanner .crafting-item.pink,
+#minecraftbanner .crafting-item.purple,
+#minecraftbanner .crafting-item.red,
+#minecraftbanner .crafting-item.stick,
+#minecraftbanner .crafting-item.vine,
+#minecraftbanner .crafting-item.white,
+#minecraftbanner .crafting-item.wither,
+#minecraftbanner .crafting-item.yellow {
+    background-image: url("../img/flags/craft.png")
+        /*tpa=https://skinmc.net/img/flags/craft.png*/
+        !important;
+    background-repeat: no-repeat;
+    image-rendering: pixelated
+}
+
+#minecraftbanner .craft-base.crafting-item.apple,
+#minecraftbanner .craft-base.crafting-item.black,
+#minecraftbanner .craft-base.crafting-item.blue,
+#minecraftbanner .craft-base.crafting-item.bn,
+#minecraftbanner .craft-base.crafting-item.brick,
+#minecraftbanner .craft-base.crafting-item.brown,
+#minecraftbanner .craft-base.crafting-item.creeper,
+#minecraftbanner .craft-base.crafting-item.cyan,
+#minecraftbanner .craft-base.crafting-item.dark_gray,
+#minecraftbanner .craft-base.crafting-item.flower,
+#minecraftbanner .craft-base.crafting-item.gray,
+#minecraftbanner .craft-base.crafting-item.green,
+#minecraftbanner .craft-base.crafting-item.light_blue,
+#minecraftbanner .craft-base.crafting-item.lime,
+#minecraftbanner .craft-base.crafting-item.magenta,
+#minecraftbanner .craft-base.crafting-item.orange,
+#minecraftbanner .craft-base.crafting-item.pink,
+#minecraftbanner .craft-base.crafting-item.purple,
+#minecraftbanner .craft-base.crafting-item.red,
+#minecraftbanner .craft-base.crafting-item.stick,
+#minecraftbanner .craft-base.crafting-item.vine,
+#minecraftbanner .craft-base.crafting-item.white,
+#minecraftbanner .craft-base.crafting-item.wither,
+#minecraftbanner .craft-base.crafting-item.yellow {
+    background-image: url("../img/flags/craft_b.png")
+        /*tpa=https://skinmc.net/img/flags/craft_b.png*/
+        !important;
+    background-repeat: no-repeat;
+    image-rendering: pixelated
+}
+
+#minecraftbanner .craft-base.crafting-item.black:hover:after {
+    content: "黑色羊毛"
+}
+
+#minecraftbanner .craft-base.crafting-item.blue:hover:after {
+    content: "蓝色羊毛"
+}
+
+#minecraftbanner .craft-base.crafting-item.brown:hover:after {
+    content: "棕色羊毛"
+}
+
+#minecraftbanner .craft-base.crafting-item.cyan:hover:after {
+    content: "青色羊毛"
+}
+
+#minecraftbanner .craft-base.crafting-item.dark_gray:hover:after {
+    content: "深灰色羊毛"
+}
+
+#minecraftbanner .craft-base.crafting-item.green:hover:after {
+    content: "绿色羊毛"
+}
+
+#minecraftbanner .craft-base.crafting-item.light_blue:hover:after {
+    content: "浅蓝色羊毛"
+}
+
+#minecraftbanner .craft-base.crafting-item.lime:hover:after {
+    content: "黄绿色羊毛"
+}
+
+#minecraftbanner .craft-base.crafting-item.magenta:hover:after {
+    content: "品红色羊毛"
+}
+
+#minecraftbanner .craft-base.crafting-item.orange:hover:after {
+    content: "橙色羊毛"
+}
+
+#minecraftbanner .craft-base.crafting-item.pink:hover:after {
+    content: "粉红色羊毛"
+}
+
+#minecraftbanner .craft-base.crafting-item.purple:hover:after {
+    content: "紫色羊毛"
+}
+
+#minecraftbanner .craft-base.crafting-item.red:hover:after {
+    content: "红色羊毛"
+}
+
+#minecraftbanner .craft-base.crafting-item.gray:hover:after {
+    content: "灰色羊毛"
+}
+
+#minecraftbanner .craft-base.crafting-item.white:hover:after {
+    content: "白色羊毛"
+}
+
+#minecraftbanner .craft-base.crafting-item.yellow:hover:after {
+    content: "黄色羊毛"
+}
+
+
+#minecraftbanner .crafting-item.apple {
+    background-position: 0 0
+}
+
+#minecraftbanner .crafting-item.bn {
+    background-position: -13px 0
+}
+
+#minecraftbanner .crafting-item.brick {
+    background-position: -26px 0
+}
+
+#minecraftbanner .crafting-item.creeper {
+    background-position: -39px 0
+}
+
+#minecraftbanner .crafting-item.black {
+    background-position: 0 -13px
+}
+
+#minecraftbanner .crafting-item.blue {
+    background-position: -13px -13px
+}
+
+#minecraftbanner .crafting-item.brown {
+    background-position: -26px -13px
+}
+
+#minecraftbanner .crafting-item.cyan {
+    background-position: -39px -13px
+}
+
+#minecraftbanner .crafting-item.dark_gray {
+    background-position: 0 -26px
+}
+
+#minecraftbanner .crafting-item.green {
+    background-position: -13px -26px
+}
+
+#minecraftbanner .crafting-item.light_blue {
+    background-position: -26px -26px
+}
+
+#minecraftbanner .crafting-item.lime {
+    background-position: -39px -26px
+}
+
+#minecraftbanner .crafting-item.magenta {
+    background-position: 0 -39px
+}
+
+#minecraftbanner .crafting-item.orange {
+    background-position: -13px -39px
+}
+
+#minecraftbanner .crafting-item.pink {
+    background-position: -26px -39px
+}
+
+#minecraftbanner .crafting-item.purple {
+    background-position: -39px -39px
+}
+
+#minecraftbanner .crafting-item.red {
+    background-position: 0 -52px
+}
+
+#minecraftbanner .crafting-item.gray {
+    background-position: -13px -52px
+}
+
+#minecraftbanner .crafting-item.white {
+    background-position: -26px -52px
+}
+
+#minecraftbanner .crafting-item.yellow {
+    background-position: -39px -52px
+}
+
+#minecraftbanner .crafting-item.flower {
+    background-position: 0 -65px
+}
+
+#minecraftbanner .crafting-item.stick {
+    background-position: -13px -65px
+}
+
+#minecraftbanner .crafting-item.wither {
+    background-position: -26px -65px
+}
+
+#minecraftbanner .crafting-item.vine {
+    background-position: -39px -65px
+}
+
+#minecraftbanner .crafting-item.apple:hover:after,
+#minecraftbanner .crafting-item.black:hover:after,
+#minecraftbanner .crafting-item.blue:hover:after,
+#minecraftbanner .crafting-item.bn:hover:after,
+#minecraftbanner .crafting-item.brick:hover:after,
+#minecraftbanner .crafting-item.brown:hover:after,
+#minecraftbanner .crafting-item.creeper:hover:after,
+#minecraftbanner .crafting-item.cyan:hover:after,
+#minecraftbanner .crafting-item.dark_gray:hover:after,
+#minecraftbanner .crafting-item.flower:hover:after,
+#minecraftbanner .crafting-item.gray:hover:after,
+#minecraftbanner .crafting-item.green:hover:after,
+#minecraftbanner .crafting-item.light_blue:hover:after,
+#minecraftbanner .crafting-item.lime:hover:after,
+#minecraftbanner .crafting-item.magenta:hover:after,
+#minecraftbanner .crafting-item.orange:hover:after,
+#minecraftbanner .crafting-item.pink:hover:after,
+#minecraftbanner .crafting-item.purple:hover:after,
+#minecraftbanner .crafting-item.red:hover:after,
+#minecraftbanner .crafting-item.stick:hover:after,
+#minecraftbanner .crafting-item.vine:hover:after,
+#minecraftbanner .crafting-item.white:hover:after,
+#minecraftbanner .crafting-item.wither:hover:after,
+#minecraftbanner .crafting-item.yellow:hover:after {
+    background: var(--bs-dark);
+    border-radius: 6px;
+    bottom: 8px;
+    color: var(--bs-white);
+    content: "";
+    cursor: default !important;
+    display: block;
+    font-size: 14px;
+    left: 10px;
+    line-height: normal;
+    padding: 4px 8px;
+    pointer-events: none;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 1200
+}
+
+#minecraftbanner .crafting-item.apple:hover:after {
+    content: "附魔金苹果"
+}
+
+#minecraftbanner .crafting-item.bn:hover:after {
+    content: "旗帜"
+}
+
+#minecraftbanner .crafting-item.brick:hover:after {
+    content: "砖块"
+}
+
+#minecraftbanner .crafting-item.creeper:hover:after {
+    content: "苦力怕头颅"
+}
+
+#minecraftbanner .crafting-item.black:hover:after {
+    content: "墨囊"
+}
+
+#minecraftbanner .crafting-item.blue:hover:after {
+    content: "青金石"
+}
+
+#minecraftbanner .crafting-item.brown:hover:after {
+    content: "可可豆"
+}
+
+#minecraftbanner .crafting-item.cyan:hover:after {
+    content: "青色染料"
+}
+
+#minecraftbanner .crafting-item.dark_gray:hover:after {
+    content: "深灰色染料"
+}
+
+#minecraftbanner .crafting-item.green:hover:after {
+    content: "绿色染料"
+}
+
+#minecraftbanner .crafting-item.light_blue:hover:after {
+    content: "淡蓝色染料"
+}
+
+#minecraftbanner .crafting-item.lime:hover:after {
+    content: "黄绿色染料"
+}
+
+#minecraftbanner .crafting-item.magenta:hover:after {
+    content: "品红色染料"
+}
+
+#minecraftbanner .crafting-item.orange:hover:after {
+    content: "橙色染料"
+}
+
+#minecraftbanner .crafting-item.pink:hover:after {
+    content: "粉红色染料"
+}
+
+#minecraftbanner .crafting-item.purple:hover:after {
+    content: "紫色染料"
+}
+
+#minecraftbanner .crafting-item.red:hover:after {
+    content: "红色染料"
+}
+
+#minecraftbanner .crafting-item.gray:hover:after {
+    content: "灰色染料"
+}
+
+#minecraftbanner .crafting-item.white:hover:after {
+    content: "白色染料"
+}
+
+#minecraftbanner .crafting-item.yellow:hover:after {
+    content: "黄色染料"
+}
+
+#minecraftbanner .crafting-item.flower:hover:after {
+    content: "花"
+}
+
+#minecraftbanner .crafting-item.stick:hover:after {
+    content: "木棍"
+}
+
+#minecraftbanner .crafting-item.wither:hover:after {
+    content: "凋零骷髅头颅"
+}
+
+#minecraftbanner .crafting-item.vine:hover:after {
+    content: "藤蔓"
+}
+
+
+/*# sourceMappingURL=_mc-bannereditor.css.map*/

@@ -1,0 +1,64 @@
+// 在导航栏中将站点名称改为斜体
+// 确保选择器具有足够的特异性以覆盖现有样式
+@font-face {
+    font-family: 'Chill';
+    src: url('/font/chill.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Dotted';
+    src: url('/font/dotted.otf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Quan';
+    src: url('/font/quan.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Von12';
+    src: url('/font/von12.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Von16';
+    src: url('/font/von16.ttf') format('truetype');
+  }
+  // @font-face {
+  //   font-family: 'Minecraft';
+  //   src: url('/font/Minecraft.ttf') format('truetype');
+  // }
+
+.vp-hero-info {
+  flex-direction: column;
+  font-family: 'Von12';
+}
+#main-title {
+    flex-direction: column;
+    font-family: 'Von12';
+}
+.vp-hero-image {
+    margin-top: 0px;
+}
+.vp-hero-infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+#main-description {
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    letter-spacing: 4px;
+}
+.vp-hero-actions {
+    margin-block-end: 0px;
+    margin-block-start: 15px;
+    letter-spacing: 3px;
+}
+// #main-title {
+//   color: #111;
+//   -webkit-text-fill-color: initial;
+//   background: initial;
+// }
+// #main-description {
+//   color: #111;
+//   -webkit-text-fill-color: initial;
+//   background: initial;
+// }

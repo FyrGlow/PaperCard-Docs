@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="使用React、Redux、Immutable制作的俄罗斯方块" />
+    <meta name="keywords" content="俄罗斯方块,Tetris,React,Redux,Immuatble,JavaScript">
+    <meta name="format-detection" content="telephone=no"/>
+    <script>;(function(){var w=parseInt(window.screen.width),s=w/640,u=navigator.userAgent.toLowerCase(),m='<meta name="viewport" content="width=640,';if(/android (\d+\.\d+)/.test(u)){if(parseFloat(RegExp.$1)>2.3)m+='minimum-scale='+s+',maximum-scale='+s+',';}else{m+='user-scalable=no,';}m+='target-densitydpi=device-dpi">';document.write(m);}());</script>
+    <meta charset="UTF-8">
+    <title>俄罗斯方块</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="./loader.css" rel="stylesheet" />
+    <link href="css-1.0.1.css" rel="stylesheet">
+    <style>
+        /* 复杂的 ID 和 Class，避免冲突 */
+        #container {
+        width: 700px;
+        margin-top: 400px;
+        margin-left: 20px; /* 将容器左对齐 */
+        padding: 20px;
+        }
+      
+        #russian-tetris-text {
+          font-family: Arial, sans-serif;
+          font-size: 24px;
+          color: #333;
+          text-align: center;
+        }
+      
+        .return-button {
+          display: block;
+          width: 200px;
+          height: 50px;
+          line-height: 50px;
+          margin-top: 20px;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+          background-color: rgb(239, 204, 25);
+          border: none;
+          border-radius: 5px;
+          font-family: Arial, sans-serif;
+          font-size: 16px;
+          color: #fff;
+          text-decoration: none;
+          transition: background-color 0.3s ease;
+        }
+      
+        .return-button:hover {
+          background-color: #ffcc00;
+        }
+      </style>
+</head>
+<body>
+<div id="root">
+    <div class="load">
+        <div class="loader">加载中...</div>
+    </div>
+</div>
+<div id="container">
+    <div id="russian-tetris-text" class="game-title">俄罗斯方块</div>
+    <a href="/news/game.html" class="return-button" id="return-to-game-list">返回纸片小游戏列表</a>
+  </div>
+<script type="text/javascript" src="app-1.0.1.js"></script></body>
+</html>

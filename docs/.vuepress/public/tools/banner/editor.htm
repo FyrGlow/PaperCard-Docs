@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en"  dir="ltr" >
+    <head>
+        <!--  Meta Data -->
+        <meta charset=UTF-8"utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+                    <link rel="icon" href="https://skinmc.net/img/icons/favicon.png">
+            <link rel="icon" type="image/jpg" sizes="512x512" href="https://skinmc.net/img/pwa/app_512.png">
+            <link rel="apple-touch-icon" type="image/jpg" sizes="512x512" href="https://skinmc.net/img/pwa/app_512.png">
+        
+        <title>
+                        我的世界旗帜编辑器
+        </title>
+        <meta name="description" content="Create and design your very own custom Minecraft Banners designs with all the patterns and colors from the game! These can be used to decorate your world or be worn as an Optifine Cape using the Banner Cape. You can generate give codes for banners or shields. — SkinMC">
+        <meta name="keywords" content="Minecraft Banner Generator, Banner Generator, Banner Maker, Minecraft banner code,
+Banner Give Code, Custom banner, Minecraft banner crafting, Optifine Cape Banner">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://skinmc.net/banner/editor">
+
+        
+        <!-- Styles -->
+        <link href="../css/app.css-id=b702a70f392e0f4245c6bdd74d415e1f.css" tppabs="https://skinmc.net/css/app.css?id=b702a70f392e0f4245c6bdd74d415e1f" rel="stylesheet">
+
+        <!-- PWA -->
+        <link rel="manifest" href="/json/manifest.json?id=fdd95e03b65e308f89647ba5e921487d">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="SkinMC">
+        <meta name="apple-mobile-web-app-title" content="SkinMC">
+        <meta name="theme-color" content="#000000">
+        <meta name="msapplication-navbutton-color" content="#000000">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-starturl" content="https://skinmc.net">
+
+        
+        
+        
+            <style>
+        #cape_viewer_preview * {
+            background-image: var(--editor-texture);
+            background-position: -16px -16px;
+        }
+
+        #cape_viewer_preview .left::before,
+        #cape_viewer_preview .right::before,
+        #cape_viewer_preview .front::before,
+        #cape_viewer_preview .top::before,
+        #cape_viewer_preview .back::before {
+            background-color: rgba(0, 0, 0, 0.1);
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+        }
+
+        #mydivheader{
+            height: 24px; width: 100%; cursor: grab;
+        }
+        #mydivheader:active {
+            cursor: grabbing;
+        }
+
+        [data-bs-theme=dark] .drag-handle {
+            background: var(--dark-lighter)
+        }
+        .drag-handle {
+            background: rgba(0, 0, 0, 0.25)
+        }
+    </style>
+    <link href="../css/_mc-bannereditor.css" tppabs="https://skinmc.net/css/_mc-bannereditor.css" rel="stylesheet">
+
+        <style >[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {display:none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
+    </head>
+    <style>
+        .search-nav.mobile {
+            padding-top: env(safe-area-inset-top, 32px);
+        }
+        .tab-bar {
+            padding-bottom: env(safe-area-inset-bottom, 24px);
+            height: calc(env(safe-area-inset-bottom, 24px) + 54px)
+        }
+    </style>
+    <body style="margin-top: 40px; background-color: #f2f2f2;">
+</div>
+
+
+<script>
+    window.fwSettings={
+        'widget_id':103000002180
+    };
+    !function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}()
+</script>
+<script type='text/javascript' src="../../euc-widget.freshworks.com/widgetBase/bootstrap.js" tppabs="https://euc-widget.freshworks.com/widgets/103000002180.js" async defer></script>
+<script type='text/javascript'>
+    FreshworksWidget('hide', 'launcher');
+    FreshworksWidget('identify', 'ticketForm', {
+        name: '',
+        email: '',
+    });
+</script>
+
+    
+<div class="container-fluid position-relative p-0 mb-n5 banner" id="minecraftbanner">
+
+    <!-- Floating bar -->
+    <div class="position-absolute p-2 d-flex justify-content-between w-100" style="z-index: 20; pointer-events: none">
+        <div class="bg-white border border-24 shadow d-flex align-items-center" style="pointer-events: initial">
+            <div class="dropdown">
+                <a href="https://skinmc.net/" class="btn rounded-pill hover-bg shadow-none px-1 py-1 align-middle d-flex align-items-center ms-2 me-1" role="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="更多工具">
+                    <span class="material-icons text-decoration-none m-1 d-flex">menu</span>
+                </a>
+            </div>
+            <div class="border-end p-3 ps-0 d-none d-md-flex">
+                <p class="mb-0"><b>SkinMC</b> Banner Editor</p>
+            </div>
+            <div role="group" class="px-2 pe-md-3">
+                <button onclick="random()" type="button" class="btn btn-link text-reset text-decoration-none hover-bg border-16 tool undo px-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="随机生成"><span class="material-icons d-flex">shuffle</span></button>
+                <button onclick="clearAll()" type="button" class="btn btn-link text-reset text-decoration-none hover-bg border-16 tool undo px-2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="清除所有"><span class="material-icons d-flex">layers_clear</span></button>
+                <button onclick="clearAll()" type="button" class="btn btn-link text-reset text-decoration-none hover-bg border-16 tool undo px-2" data-bs-toggle="modal" data-bs-target="#skinEditorFaq"><span data-bs-toggle="tooltip" data-bs-placement="bottom" title="帮助" class="material-icons d-flex">help</span></button>
+            </div>
+        </div>
+
+        <div class="d-flex gap-md-3 gap-1">
+            <div class="bg-white border border-24 shadow d-flex align-items-center" style="pointer-events: initial">
+                <div role="group" class="px-md-3 px-2 py-2 d-flex">
+                    <div class="d-flex gap-3">
+                        <div id="saved" onclick="savedHandler(event)" class="mt mt-md-0 ms-md-auto">
+                            <div class="saved-add" id="saved-add" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-offset="0,10" aria-label="Save banner" data-bs-original-title="Save banner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!-- Cape editor canvas and options -->
+    <div class="editor-main bg-light">
+        <div class="container-fluid pt-0">
+            <div class="row position-relative">
+                <style>
+                    @media (max-width: 768px) {
+                        .layer-options {
+                            position: relative!important;
+                            left: auto!important;
+                            right: auto!important;
+                            top: auto!important;
+                        }
+                    }
+                </style>
+                <div class="col-lg-3 col-md-4 col-12 ps-md-0 ms-auto position-absolute order-3 order-md-1 layer-options" style="pointer-events: initial; z-index: 100; left: 12px; top: 78px" id="mydiv">
+                    <div class="mb-4 pointer-cursor border-24 h-auto shadow border bg-white">
+                        <div id="mydivheader" class="d-flex justify-content-center align-items-center">
+                            <div class="drag-handle rounded-pill" style="height:6px; width: 32px"></div>
+                        </div>
+
+                        <!-- banner layers -->
+                        <div class="layers-container" id="layers-container">
+                            <div id="layers" class="px-3 mb-auto">
+                                <div class="layer visable">
+                                    <div class="layer-color white">
+                                    </div>
+                                    <div class="layer-pattern">
+                                        <div class="layer-hover">
+                                            <div class="layer-color-container pb-0 mb-0" style="border: 0px!important">
+                                                <div class="toolbar-color black" title="black"></div>
+                                                <div class="toolbar-color dark_gray" title="dark_gray"></div>
+                                                <div class="toolbar-color gray" title="gray"></div>
+                                                <div class="toolbar-color white" title="white"></div>
+                                                <div class="toolbar-color pink" title="pink"></div>
+                                                <div class="toolbar-color magenta" title="magenta"></div>
+                                                <div class="toolbar-color purple" title="purple"></div>
+                                                <div class="toolbar-color blue" title="blue"></div>
+                                                <div class="toolbar-color cyan" title="cyan"></div>
+                                                <div class="toolbar-color light_blue" title="light_blue"></div>
+                                                <div class="toolbar-color green" title="green"></div>
+                                                <div class="toolbar-color lime" title="lime"></div>
+                                                <div class="toolbar-color yellow" title="yellow"></div>
+                                                <div class="toolbar-color orange" title="orange"></div>
+                                                <div class="toolbar-color brown" title="brown"></div>
+                                                <div class="toolbar-color red" title="red"></div>
+                                            </div>
+                                        </div>
+                                        <i class="toolbar-pattern" color="15" pattern="base"></i>
+                                    </div>
+                                    <div class="layer-craft"></div>
+                                </div>
+                            </div>
+                            <div id="total" class="bg-light p-2" style="border-radius: 0 0 24px 24px;">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Skin editor canvas -->
+                <div class="p-0 col-12 skineditor editor-canvas">
+                    <div class="col-lg-6 col-md-8 offset-md-3">
+                        <div class="container d-flex justify-content-center py-5 mt-5">
+                            <div class="col-11 pt-md-5">
+                                <div class="bg-white h-100 d-flex flex-column shadow-sm border">
+                                    <div class="d-flex justify-content-center w-100 h-100 transparent-bg position-relative">
+                                        <div class="position-absolute end-0 pe-3 pt-3">
+                                            <div id="saved-gallery-container" class="hidden">
+                                                <div class="d-flex">
+                                                    <div id="saved-gallery" onclick="savedGalleryHandler(event)" class="ps-0 card-pressed" style="cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="left" title="Reset to banner from URL" ></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="canvas-container d-flex bannerAnimation py-5">
+                                            <div id="canvas-skew">
+                                                <div id="canvas-wave">
+                                                    <div id="canvas">
+                                                        <i pattern="base" id="base" color="15"></i>
+                                                    </div>
+                                                    <div id="base-overlay"></div>
+                                                    <div id="preview"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-12 ps-md-0 ms-auto end-0 editor-buttons mb-3">
+                    <div class="editor-options mb-4 pointer-cursor border-24 h-auto shadow border bg-white custom-scroll">
+                        <div id="toolbar">
+                            <div id="toolbar-colors" class="border-bottom pb-3 p-3 p-md-4" onclick="colorsHandler(event)">
+                                <div class="toolbar-color black sel" data-bs-toggle="tooltip" data-bs-placement="bottom" title="黑色"></div>
+                                <div class="toolbar-color dark_gray" data-bs-toggle="tooltip" data-bs-placement="bottom" title="深灰色"></div>
+                                <div class="toolbar-color gray" data-bs-toggle="tooltip" data-bs-placement="bottom" title="灰色"></div>
+                                <div class="toolbar-color white" data-bs-toggle="tooltip" data-bs-placement="bottom" title="白色" style="border: 1px solid #ececec"></div>
+                                <div class="toolbar-color pink" data-bs-toggle="tooltip" data-bs-placement="bottom" title="粉红色"></div>
+                                <div class="toolbar-color magenta" data-bs-toggle="tooltip" data-bs-placement="bottom" title="品红色"></div>
+                                <div class="toolbar-color purple" data-bs-toggle="tooltip" data-bs-placement="bottom" title="紫色"></div>
+                                <div class="toolbar-color blue" data-bs-toggle="tooltip" data-bs-placement="bottom" title="蓝色"></div>
+                                <div class="toolbar-color cyan" data-bs-toggle="tooltip" data-bs-placement="bottom" title="青色"></div>
+                                <div class="toolbar-color light_blue" data-bs-toggle="tooltip" data-bs-placement="bottom" title="淡蓝色"></div>
+                                <div class="toolbar-color green" data-bs-toggle="tooltip" data-bs-placement="bottom" title="绿色"></div>
+                                <div class="toolbar-color lime" data-bs-toggle="tooltip" data-bs-placement="bottom" title="黄绿色"></div>
+                                <div class="toolbar-color yellow" data-bs-toggle="tooltip" data-bs-placement="bottom" title="黄色"></div>
+                                <div class="toolbar-color orange" data-bs-toggle="tooltip" data-bs-placement="bottom" title="橙色"></div>
+                                <div class="toolbar-color brown" data-bs-toggle="tooltip" data-bs-placement="bottom" title="棕色"></div>
+                                <div class="toolbar-color red" data-bs-toggle="tooltip" data-bs-placement="bottom" title="红色"></div>
+                            </div>                  
+                            <div id="toolbar-patterns" class="p-3 p-md-4" onclick="patternsHandler(event)" onmouseover="showPreview(event)"
+                                 onmouseout="hidePreview(event)">
+                                <div class="tbc"><i class="toolbar-pattern" pattern="gra" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="gru" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="bri" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="hh" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="hhb" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="vh" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="vhr" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="ts" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="bs" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="ls" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="rs" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="ld" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="rud" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="lud" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="rd" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="cr" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="dls" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="drs" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="sc" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="cs" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="ms" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="tl" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="bl" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="tr" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="br" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="tt" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="bt" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="mr" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="mc" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="bts" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="tts" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="ss" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="bo" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="cbo" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="flo" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="cre" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="sku" color="0"></i></div>
+                                <div class="tbc"><i class="toolbar-pattern" pattern="moj" color="0"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 tab-pane fade active show" id="nav-faq-dash" role="tabpanel" aria-labelledby="nav-faq-dash-tab">
+                        <div class="accordion" id="accordionFaq1">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="accordionFaq1Heading">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                                        Tools
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse" aria-labelledby="accordionFaq1Heading" data-bs-parent="#accordionFaq1">
+                                    <div class="accordion-body">
+                                        <!-- tools -->
+                                        <div class="">
+                                            <div class="connected-form mb-0">
+                                                <div class="form-label-group">
+                                                    <input type="text" class="form-control" name="url" id="url" onclick="this.select()" placeholder="Share link">
+                                                    <label for="url">Share link</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="border-top mt-3 pt-3"></div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="d-flex flex-column">
+                                                    <div>
+                                                        <p class="text-muted">Generate codes</p>
+                                                    </div>
+                                                    <div class="pb-2">
+                                                        <button class="btn btn-outline-dark hover-bg shadow-none text-dark border-8 py-1 px-3 mb-2" onclick="jsonOutput(0)">/give</button>
+                                                        <button class="btn btn-outline-dark hover-bg shadow-none text-dark border-8 py-1 px-3 mb-2" onclick="jsonOutput(1)">/setblock</button>
+                                                        <button class="btn btn-outline-dark hover-bg shadow-none text-dark border-8 py-1 px-3 mb-2" onclick="jsonOutput(2)">/replaceitem</button>
+                                                        <button class="btn btn-outline-dark hover-bg shadow-none text-dark border-8 py-1 px-3 mb-2" onclick="jsonInput()">Import code</button>
+                                                        <span id="scrdl"><span></span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <textarea class="form-control border-8" rows="4" id="code" onclick="this.select()"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="skinEditorFaq" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-0 pb-0">
+                <button type="button" class="btn bg-white border border-white shadow-none rounded-pill px-2 py-2 position-relative ms-md-2 mt-md-2" style="line-height: 0;" data-bs-dismiss="modal" aria-label="Close">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+
+            <div class="modal-body p-md-4 mb-3">
+                <div class="container-fluid">
+                    <p class="fs-4">我的世界旗帜编辑器</p>
+                    <p>设计并创建您自己的 Minecraft 旗帜。这些可以用来装饰您的世界，也常常被用作 <a href="https://optifine.net" target="_blank" rel="nofollow">Optifine</a> 披风。</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="shareBanner" tabindex="-1" role="dialog" aria-labelledby="shareBannerTitle" aria-modal="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-0 pb-0">
+                <button type="button" class="btn bg-white border border-white shadow-none rounded-pill px-2 py-2 position-relative ms-md-2 mt-md-2" style="line-height: 0;" data-bs-dismiss="modal" aria-label="Close">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+
+            <div class="px-md-4 px-3">
+                <div class="container">
+                    <div class="row">
+                        <p class="fs-4 mb-3 mt-4" id="shareBannerTitle">Save banners</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-body p-md-4 pt-md-0 pt-0 mb-3 custom-scroll">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="pb-3">
+                                <div class="connected-form mb-0">
+                                    <div class="form-label-group">
+                                        <input type="text" class="form-control" name="url" id="url-gallery" onclick="this.select()" placeholder="Share saved gallery">
+                                        <label for="url">Share saved gallery</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ms-auto">
+                                <button class="btn btn-outline-dark hover-bg shadow-none text-dark border-8 py-1 px-3 bchestex" onclick="exportChest(0)">Export to chest</button>
+                                <button class="btn btn-outline-dark hover-bg shadow-none text-dark border-8 py-1 px-3 bchestex" onclick="clearSaved()">Delete all</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+        <style>
+    .eu-popup {
+        bottom: 0;
+        position: fixed;
+        display: flex;
+        padding: 24px;
+        z-index: 4242;
+        flex-wrap: wrap;
+        background-color: var(--bs-body-bg);
+        box-shadow: 0px 0px 1px 0px rgb(0 0 0 / 15%), 0px 4px 24px 4px rgb(0 0 0 / 15%);
+        margin: 20px;
+        border-radius: 24px;
+        transition: bottom ease-in-out .2s;
+        flex-direction: column;
+    }
+
+    [data-bs-theme=dark] .eu-popup {
+        background-color: var(--bs-dark)!important;
+    }
+
+    .eu-popup-button {
+        background-color: #212121;
+        color: white;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: 1px #212121 solid;
+        border-radius: 8px;
+    }
+
+    .eu-popup-button:hover {
+        cursor: pointer;
+        background-color: black !important;
+    }
+
+    [data-bs-theme=dark] .eu-popup-button {
+        background-color: var(--bs-body-color);
+        color: var(--bs-body-bg);
+    }
+
+    [data-bs-theme=dark] .eu-popup-button:hover {
+        background-color: rgba(var(--bs-body-color-rgb), 0.95) !important;
+        color: var(--bs-body-bg);
+    }
+
+    .eu-popup-button#editButton {
+        background-color: white !important;
+        color: #212121;
+    }
+
+    .eu-popup-button#editButton:hover {
+        background-color: rgba(0, 0, 0, 0.05) !important;
+    }
+
+    [data-bs-theme=dark] .eu-popup-button#editButton {
+        background-color: rgba(var(--bs-body-color-rgb), 0.15) !important;
+        color: var(--bs-body-color);
+    }
+
+    [data-bs-theme=dark] .eu-popup-button#editButton:hover {
+        background-color: rgba(var(--bs-body-color-rgb), 0.2) !important;
+        color: var(--bs-body-color);
+    }
+
+    .eu-popup.modal-show {
+        bottom: -250px;
+    }
+</style>
+
+<style>
+    .eu-popup {
+        bottom: 54px!important;
+    }
+</style>
+
+        <!-- Scripts -->
+        <script src="../js/alpine.js" defer></script>
+        <script src="../js/app.js"></script>
+        <script src="../js/serviceworker.js" defer></script>
+        <script src="../js/modernizr-custom.js"></script>
+        <script src="../js/typeahead.bundle.min.js"></script>
+        <script>const LOCALE = "en";</script>
+            <script>
+
+        // Make the DIV element draggable:
+        dragElement(document.getElementById("mydiv"));
+
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            if (document.getElementById(elmnt.id + "header")) {
+                // if present, the header is where you move the DIV from:
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+            } else {
+                // otherwise, move the DIV from anywhere inside the DIV:
+                elmnt.onmousedown = dragMouseDown;
+            }
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                // set the element's new position:
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                // stop moving when mouse button is released:
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+    </script>
+<script defer src="../js/banner.js" tppabs="https://skinmc.net/js/banner.js"></script>
+
+
+    </body>
+</html>
